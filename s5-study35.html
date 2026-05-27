@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Walking Between Two Worlds — Cloud of Witnesses</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <button class="topbar-toggle" id="sidebar-toggle" aria-label="Toggle navigation">&#9776;</button>
+  <a href="index.html" class="topbar-logo"><span>☁</span> Cloud of Witnesses</a>
+  <span class="topbar-sub">A Journey Through Church History</span>
+</header>
+<div class="sidebar-overlay" id="sidebar-overlay"></div>
+<nav class="sidebar" id="sidebar">
+  <div class="sidebar-section-label">Home</div>
+  <a href="index.html" class="nav-link">All Seasons</a>
+  <hr class="sidebar-divider">
+  <div class="sidebar-section-label">Season I</div>
+  <a href="season1.html" class="nav-link season-head">Who Is This Jesus?</a>
+  <a href="s1-study1.html" class="nav-link"><span class="nav-num">1 ·</span> The Man They Couldn't Define Away</a>
+  <a href="s1-study2.html" class="nav-link"><span class="nav-num">2 ·</span> Two Natures, One Lord</a>
+  <a href="s1-study3.html" class="nav-link"><span class="nav-num">3 ·</span> The Bishop Who Wouldn't Bow</a>
+  <a href="s1-study4.html" class="nav-link"><span class="nav-num">4 ·</span> The Letter That Held the Church Together</a>
+  <a href="s1-study5.html" class="nav-link"><span class="nav-num">5 ·</span> Light from the East</a>
+  <a href="s1-study6.html" class="nav-link"><span class="nav-num">6 ·</span> Keeping the Story Straight</a>
+  <a href="s1-study7.html" class="nav-link"><span class="nav-num">7 ·</span> The Creed in Your Mouth</a>
+  <a href="s1-study8.html" class="nav-link"><span class="nav-num">8 ·</span> The Word Made Flesh</a>
+  <hr class="sidebar-divider">
+  <div class="sidebar-section-label">Season II</div>
+  <a href="season2.html" class="nav-link season-head">The Book That Would Not Stay Buried</a>
+  <a href="s2-study9.html" class="nav-link"><span class="nav-num">9 ·</span> How We Got the Bible</a>
+  <a href="s2-study10.html" class="nav-link"><span class="nav-num">10 ·</span> The Scholar in the Cave</a>
+  <a href="s2-study11.html" class="nav-link"><span class="nav-num">11 ·</span> The Morning Star of the Reformation</a>
+  <a href="s2-study12.html" class="nav-link"><span class="nav-num">12 ·</span> The Bible in Chains</a>
+  <a href="s2-study13.html" class="nav-link"><span class="nav-num">13 ·</span> Burned for a Plowboy</a>
+  <a href="s2-study14.html" class="nav-link"><span class="nav-num">14 ·</span> Gutenberg's Unexpected Gospel</a>
+  <hr class="sidebar-divider">
+  <div class="sidebar-section-label">Season III</div>
+  <a href="season3.html" class="nav-link season-head">Grace Alone</a>
+  <a href="s3-study15.html" class="nav-link"><span class="nav-num">15 ·</span> The Restless Heart</a>
+  <a href="s3-study16.html" class="nav-link"><span class="nav-num">16 ·</span> The Cracks in the Cathedral</a>
+  <a href="s3-study17.html" class="nav-link"><span class="nav-num">17 ·</span> The Monk Who Couldn't Stop Shaking</a>
+  <a href="s3-study18.html" class="nav-link"><span class="nav-num">18 ·</span> The City on a Lake</a>
+  <a href="s3-study19.html" class="nav-link"><span class="nav-num">19 ·</span> Faith Alone, But Not Alone Faith</a>
+  <a href="s3-study20.html" class="nav-link"><span class="nav-num">20 ·</span> But What About Free Will?</a>
+  <a href="s3-study21.html" class="nav-link"><span class="nav-num">21 ·</span> The Fire and the Hammer</a>
+  <hr class="sidebar-divider">
+  <div class="sidebar-section-label">Season IV</div>
+  <a href="season4.html" class="nav-link season-head">The Church in Every Nation</a>
+  <a href="s4-study22.html" class="nav-link"><span class="nav-num">22 ·</span> Fire in the Emerald Isle</a>
+  <a href="s4-study23.html" class="nav-link"><span class="nav-num">23 ·</span> The Apostles to the Slavs</a>
+  <a href="s4-study24.html" class="nav-link"><span class="nav-num">24 ·</span> The Shoemaker Who Changed Everything</a>
+  <a href="s4-study25.html" class="nav-link"><span class="nav-num">25 ·</span> The Girl Who Prayed China Open</a>
+  <a href="s4-study26.html" class="nav-link"><span class="nav-num">26 ·</span> Follow Me Into the Dark</a>
+  <a href="s4-study27.html" class="nav-link"><span class="nav-num">27 ·</span> A Doctor in Africa's Heart</a>
+  <a href="s4-study28.html" class="nav-link"><span class="nav-num">28 ·</span> The Strange Man from India</a>
+  <a href="s4-study29.html" class="nav-link"><span class="nav-num">29 ·</span> The Kingdom Has No Borders</a>
+  <hr class="sidebar-divider">
+  <div class="sidebar-section-label">Season V</div>
+  <a href="season5.html" class="nav-link season-head">How Shall We Then Live?</a>
+  <a href="s5-study30.html" class="nav-link"><span class="nav-num">30 ·</span> Amazing Grace</a>
+  <a href="s5-study31.html" class="nav-link"><span class="nav-num">31 ·</span> The Little Poor Man</a>
+  <a href="s5-study32.html" class="nav-link"><span class="nav-num">32 ·</span> The Cost of Discipleship</a>
+  <a href="s5-study33.html" class="nav-link"><span class="nav-num">33 ·</span> She Kept the Door Open</a>
+  <a href="s5-study34.html" class="nav-link"><span class="nav-num">34 ·</span> The Preacher and the City</a>
+  <a href="s5-study35.html" class="nav-link active"><span class="nav-num">35 ·</span> Walking Between Two Worlds</a>
+  <a href="s5-study36.html" class="nav-link"><span class="nav-num">36 ·</span> The Reformation's Unintended Gifts</a>
+  <hr class="sidebar-divider">
+  <div class="sidebar-section-label">Coming Soon</div>
+  <a class="nav-link soon season-head">Season VI — Family Disagreements</a>
+  <a class="nav-link soon season-head">Season VII — Dark Chapters</a>
+  <a class="nav-link soon season-head">Season VIII — Still Speaking</a>
+</nav>
+<div class="main-wrap">
+  <div class="main-content">
+    <div class="study-eyebrow">Season V · Study 35 · United States, 20th century</div>
+    <h1 class="study-title">Walking Between Two Worlds</h1>
+    <p class="study-subtitle">Martin Luther King Jr., the Prophetic Tradition, and the Dignity of Every Image-Bearer</p>
+    <div class="study-tags"><span class="study-tag">Martin Luther King Jr.</span><span class="study-tag">Civil Rights</span><span class="study-tag">Prophetic Tradition</span><span class="study-tag">1929–1968 AD</span></div>
+
+    <div class="study-section">
+      <div class="sec-label-row"><div class="sec-dot dot-hook"></div><span class="sec-tag tag-hook">Opening</span></div>
+      <h2>A Note on This Study</h2>
+      <div class="hook-box">
+        <p>Martin Luther King Jr. is one of the most significant Christian public figures of the 20th century. He is also one of the most contested — contested politically across every spectrum, and contested theologically by those who have examined his academic writings and found elements incompatible with orthodox Christianity.</p>
+        <p>This study engages the historical King honestly. We focus on what is genuinely powerful and prophetically important in his public ministry: his application of the biblical prophetic tradition to racial injustice, his grounding of civil rights in the Christian doctrine of the image of God in every human being, and the sermons he preached — which drew deeply on Scripture, the black church tradition, and the most orthodox strands of the Christian theological heritage. We do not ignore the complexity, and we will note it. But we believe the prophetic tradition he stood in, and the theological argument he made from the pulpit, are genuinely part of the church's witness to the dignity of human beings — and belong in any honest account of how the gospel has shaped public life.</p>
+      </div>
+    </div>
+
+    <hr class="ornament">
+
+    <div class="study-section">
+      <div class="sec-label-row"><div class="sec-dot dot-hook"></div><span class="sec-tag tag-hook">The Story</span></div>
+      <h2>A Pastor's Son Who Preached the Prophets Into the Street</h2>
+      <div class="hook-box">
+        <p>Montgomery, Alabama, December 5, 1955. Rosa Parks had been arrested four days earlier for refusing to give up her bus seat to a white passenger. A twenty-six-year-old pastor named Martin Luther King Jr. — new to Montgomery, new to Dexter Avenue Baptist Church, uncertain whether to accept the leadership of the bus boycott that had spontaneously formed around Parks's arrest — stood before five thousand people at the Holt Street Baptist Church and said:</p>
+        <p>"There comes a time when people get tired of being trampled over by the iron feet of oppression... But we have come here tonight to be saved from that patience that makes us patient with anything less than freedom and justice." Then he said something that separated this meeting from every political rally it superficially resembled: "If we are wrong, the Supreme Court of this nation is wrong. If we are wrong, the Constitution of the United States is wrong. If we are wrong, God Almighty is wrong. If we are wrong, Jesus of Nazareth was merely a utopian dreamer who never came down to earth."</p>
+        <p>The argument he was making was theological before it was political. The segregated bus system was not merely unjust by the standards of American constitutional law. It was wrong by the standards of the God who had made every person in his image — and the God who had become one of them in the Incarnation, who had been born into an occupied territory under a colonial power, who had himself been subject to the judgment of an unjust legal system and executed by it. The civil rights movement, in King's telling, was not an American political project that happened to use Christian language. It was a Christian moral argument that happened to be addressed to American law.</p>
+      </div>
+    </div>
+
+    <hr class="ornament">
+
+    <div class="study-section">
+      <div class="sec-label-row"><div class="sec-dot dot-doctrine"></div><span class="sec-tag tag-doctrine">The Doctrine</span></div>
+      <h2>The Prophetic Tradition — and the Image of God</h2>
+      <p>The Hebrew prophets — Amos, Isaiah, Micah, Jeremiah — operated in a specific mode: they stood before rulers and called them to account before the standard of God's own character. They were not social revolutionaries in the modern sense. They were men who had been given a word from the Lord and could not keep it to themselves, men who insisted that the gap between Israel's confession of Yahweh and Israel's treatment of the widow, the orphan, the foreigner, and the poor was a theological problem before it was a political one. Amos: "Let justice roll down like waters, and righteousness like an ever-flowing stream" (Amos 5:24). Isaiah: "Seek justice, correct oppression; bring justice to the fatherless, plead the widow's cause" (Isaiah 1:17). Micah: "What does the Lord require of you but to do justice, and to love kindness, and to walk humbly with your God?" (Micah 6:8).</p>
+      <p>King stood in that tradition — self-consciously, explicitly. He had grown up in the black church, which had kept that prophetic tradition alive through the centuries of slavery and segregation precisely because the people in those pews needed it: they needed to hear that God had not forgotten them, that their suffering was visible to the Maker of heaven and earth, that the justice being denied them in the courts of men had not been denied them in the courts of heaven. His sermons drew on this tradition with a theological precision that his political admirers often miss and his political opponents often ignore.</p>
+      <p>The theological center of his argument was the <em>imago dei</em> — the image of God in every human person. If every human being, without exception, bears the image of God, then any social arrangement that treats human beings as lesser — as available for exploitation, as excluded from full participation in the human community, as existing for the convenience of others — stands in direct contradiction to what the Creator has declared about them. Racial segregation was not merely illegal or economically inefficient or socially destabilizing. It was a theological error: a systematic denial of what God had said about his creatures.</p>
+    </div>
+
+    <div class="study-section">
+      <div class="sec-label-row"><div class="sec-dot dot-figure"></div><span class="sec-tag tag-figure">The Figure — and the Complexity</span></div>
+      <h2>Martin Luther King Jr. (1929–1968 AD)</h2>
+      <p>King was born in Atlanta, the son and grandson of Baptist pastors. He grew up in the black church tradition, which gave him the prophetic mode, the biblical literacy, and the preaching instincts that defined his public ministry. He earned a doctorate in systematic theology from Boston University, where his academic writing engaged the liberal Protestant theology of the mid-20th century — and where scholars examining his dissertation and papers have found elements that depart from orthodox Christology, including a less-than-fully-Chalcedonian view of Christ's nature.</p>
+      <p>We name this honestly, because this curriculum does. The King of the Boston University dissertation is not always the King of the Dexter Avenue pulpit — and for the purposes of this study, it is the preacher we are engaging, not the academic. The sermons he preached — "Strength to Love," "A Knock at Midnight," "The Drum Major Instinct" — draw heavily on orthodox biblical material and the black church tradition, and they make arguments that are consistent with the prophetic tradition of Scripture in ways his academic writing sometimes is not. Both are real. The complexity should be held, not resolved by pretending either face doesn't exist.</p>
+      <p>He was assassinated in Memphis, Tennessee, on April 4, 1968, at the age of thirty-nine, standing on the balcony of the Lorraine Motel. He had been in Memphis supporting striking sanitation workers — some of the most economically marginal people in the city — which is a summary of where his ministry began and where it ended: with the poor, the excluded, the people the surrounding culture had decided did not matter.</p>
+    </div>
+
+    <hr class="ornament">
+
+    <div class="study-section">
+      <div class="sec-label-row"><div class="sec-dot dot-christ"></div><span class="sec-tag tag-christ">Christ in Focus</span></div>
+      <div class="christ-box">
+        <p>King's "Letter from Birmingham Jail" (1963) — written to white moderate clergy who urged patience — contains what may be his most theologically precise argument. He distinguishes just from unjust laws by asking: does this law "square with the moral law or the law of God"? He quotes Augustine: "An unjust law is no law at all." He quotes Aquinas. He quotes the Hebrew prophets and the Apostle Paul. And then he identifies the deepest ground of the argument: "I would agree with St. Augustine that 'an unjust law is no law at all.' Now, what is the difference between the two? A just law is a man-made code that squares with the moral law or the law of God. An unjust law is a code that is out of harmony with the moral law... Any law that degrades human personality is unjust."</p>
+        <p>The phrase "degrades human personality" is, in King's theological vocabulary, another way of saying "contradicts the image of God." The law of racial segregation degrades human personality — treats persons made in God's image as less than persons — and therefore stands condemned not by American liberalism but by the God who made those persons and declared them good.</p>
+        <p>In his final sermon — "I've Been to the Mountaintop," delivered the night before his death — he ended by saying: "I'm not worried about anything. I'm not fearing any man. Mine eyes have seen the glory of the coming of the Lord." He was quoting Julia Ward Howe quoting Revelation. He was placing his own death in the long narrative of the cloud of witnesses who had gone before him, trusting the God who governs that narrative and who had, in the resurrection of Jesus Christ, already spoken the last word about how it ends.</p>
+      </div>
+    </div>
+
+    <hr class="ornament">
+
+    <div class="study-section">
+      <div class="sec-label-row"><div class="sec-dot dot-today"></div><span class="sec-tag tag-today">Then &amp; Now</span></div>
+      <h2>The Tradition He Stood In — and the Work It Has Not Finished</h2>
+      <p>King stood in a tradition that runs from Amos through the black church through Wilberforce through the Confessing Church — the tradition of the prophetic witness, the refusal to let the church bless what God condemns, the insistence that the gospel has implications for the treatment of every person who bears the image of God. That tradition belongs to the whole church, not to any political party or ideological project. It has been claimed by voices across the spectrum, and it can be claimed by them — because its ground is theological rather than partisan. It asks a question that every generation and every political arrangement must answer: are you treating the people God made in his image as if they bear his image?</p>
+      <p>The racial reconciliation that King's movement advanced — the legal dismantling of segregation, the formal recognition of civil rights — was genuine and significant. The deeper work of racial healing — the repair of communities, the rebuilding of trust, the address of structural disadvantages accumulated over generations — is ongoing, contested, and requiring the best wisdom the church has to offer. The prophetic tradition King stood in does not supply easy political answers to those questions. What it supplies is the non-negotiable foundation: every human being bears the image of God, and that foundation is the beginning, not the end, of the conversation.</p>
+    </div>
+
+    <div class="quote-carry">
+      <div class="q-label">A Quote to Carry</div>
+      <blockquote>"Any law that degrades human personality is unjust. All segregation statutes are unjust because segregation distorts the soul and damages the personality."</blockquote>
+      <cite>— Martin Luther King Jr., Letter from Birmingham Jail, 1963</cite>
+    </div>
+
+    <div class="reflect-box">
+      <div class="r-label">Reflect</div>
+      <p>King grounded his argument not in political ideology but in the image of God in every human being. What does that foundation — the <em>imago dei</em> — demand of you in how you see and treat the people around you who are most easily overlooked or diminished?</p>
+    </div>
+
+    <div class="prayer-box">
+      <div class="p-label">Prayer</div>
+      <p>Lord, thank you for the prophetic tradition — for Amos and Isaiah and Micah, for the black church that kept those voices alive through centuries of oppression, for Martin Luther King Jr. who stood in that tradition and preached it into the streets of Montgomery and Birmingham and Memphis. Forgive the church for the times it blessed what should have been condemned, for the times it urged patience with injustice and called it wisdom. Give us the courage of the prophets: to stand before power and say, this is wrong by the standard of the God who made every person in his image. And give us the humility to begin that work in ourselves, where the image of God in the other person is most easily forgotten. Amen.</p>
+    </div>
+
+    <div class="go-deeper">
+      <h3>Go Deeper</h3>
+      <div class="deeper-row"><span class="d-type">Book</span><span><em>Strength to Love</em> by Martin Luther King Jr. — his collected sermons, the best single-volume introduction to the preacher. <em>The Radical King</em> edited by Cornel West gives the fuller scope of his later social witness. For theological context, <em>A Black Theology of Liberation</em> by James Cone represents the tradition King stood in, developed further.</span></div>
+      <div class="deeper-row"><span class="d-type">Web</span><span>The King Center — <a href="https://thekingcenter.org" target="_blank">thekingcenter.org</a> — the primary archive of King's speeches, sermons, and writings, maintained by his family, with extensive primary source material freely accessible.</span></div>
+    </div>
+    <div class="study-nav">
+    <a href="s5-study34.html" class="nav-btn">← Study 34</a>    <a href="season5.html" class="nav-btn overview-btn">↑ Season V</a>    <a href="s5-study36.html" class="nav-btn">Study 36 →</a>
+    </div>
+  </div>
+  <footer class="site-footer"><strong>Cloud of Witnesses</strong> · Season V · Study 35 · United States, 20th century</footer>
+</div>
+<script src="nav.js"></script>
+</body>
+</html>
