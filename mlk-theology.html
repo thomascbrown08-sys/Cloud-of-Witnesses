@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Martin Luther King Jr.: The Preacher, the Scholar, and the Question</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --parchment:     #faf3e4;
+      --parchment-mid: #f2e9d2;
+      --parchment-deep:#e6d9b8;
+      --ink:           #1c1508;
+      --ink-mid:       #463c26;
+      --ink-light:     #877455;
+      --gold:          #8c6f1e;
+      --gold-bright:   #c9a94e;
+      --gold-bg:       rgba(140,111,30,0.07);
+      --navy:          #192540;
+      --rust:          #752b16;
+      --border-gold:   rgba(140,111,30,0.28);
+      --border-soft:   rgba(28,21,8,0.1);
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      font-family:'Crimson Pro',Georgia,serif;
+      background:var(--parchment);
+      color:var(--ink);
+      font-size:19px;
+      line-height:1.85;
+    }
+
+    /* ── TOP STRIP ── */
+    .top-strip{
+      background:var(--navy);
+      color:rgba(255,255,255,.55);
+      font-family:'Crimson Pro',serif;
+      font-style:italic;
+      font-size:.88rem;
+      text-align:center;
+      padding:.6rem 1.5rem;
+      letter-spacing:.04em;
+    }
+
+    /* ── HERO ── */
+    .hero{
+      background:var(--navy);
+      color:#fff;
+      padding:4rem 2rem 3.5rem;
+      text-align:center;
+      position:relative;
+      overflow:hidden;
+    }
+    .hero::before{
+      content:'';position:absolute;inset:0;
+      background:radial-gradient(ellipse 70% 50% at 50% -5%,rgba(201,169,78,.15) 0%,transparent 70%);
+    }
+    .hero::after{
+      content:'';position:absolute;bottom:0;left:0;right:0;
+      height:2px;background:linear-gradient(90deg,transparent,var(--gold-bright),transparent);
+    }
+    .hero-eyebrow{
+      font-family:'Crimson Pro',serif;font-style:italic;
+      color:var(--gold-bright);font-size:.95rem;
+      letter-spacing:.1em;margin-bottom:.9rem;opacity:.85;position:relative;
+    }
+    .hero h1{
+      font-family:'Cormorant Garamond',serif;
+      font-size:clamp(2rem,5vw,3.4rem);
+      font-weight:700;color:#fff;
+      line-height:1.1;margin-bottom:.8rem;position:relative;
+    }
+    .hero h1 em{color:var(--gold-bright);font-style:normal}
+    .hero-sub{
+      font-family:'Crimson Pro',serif;font-size:1.05rem;
+      color:rgba(255,255,255,.68);max-width:580px;
+      margin:0 auto;line-height:1.65;position:relative;
+    }
+
+    /* ── MAIN ── */
+    .main{max-width:760px;margin:0 auto;padding:3rem 2rem 5rem}
+
+    /* ── SECTION ── */
+    .section{margin-bottom:3rem}
+    .section-eyebrow{
+      font-family:'Cormorant Garamond',serif;
+      font-size:.72rem;font-weight:700;
+      letter-spacing:.2em;text-transform:uppercase;
+      color:var(--gold);margin-bottom:.5rem;
+    }
+    .section h2{
+      font-family:'Cormorant Garamond',serif;
+      font-size:1.7rem;font-weight:700;
+      color:var(--ink);line-height:1.18;
+      margin-bottom:1rem;
+    }
+    .section h3{
+      font-family:'Cormorant Garamond',serif;
+      font-size:1.22rem;font-weight:700;
+      color:var(--ink);margin:1.75rem 0 .65rem;
+    }
+    p{margin-bottom:1rem}
+    p:last-child{margin-bottom:0}
+    em{font-style:italic}
+    strong{font-weight:600}
+
+    hr.ornament{
+      border:none;border-top:1px solid var(--border-gold);
+      margin:2.5rem 0;position:relative;
+    }
+    hr.ornament::before{
+      content:'✦';position:absolute;
+      top:50%;left:50%;transform:translate(-50%,-50%);
+      background:var(--parchment);padding:0 .7rem;
+      color:var(--gold-bright);font-size:.8rem;opacity:.55;
+    }
+
+    /* ── CALLOUT BOXES ── */
+    .note-box{
+      background:var(--parchment-mid);
+      border-left:3px solid var(--navy);
+      border-radius:0 4px 4px 0;
+      padding:1.3rem 1.5rem;
+      margin:1.5rem 0;
+      font-size:.98rem;
+    }
+    .note-box p{margin-bottom:.75rem}
+    .note-box p:last-child{margin-bottom:0}
+
+    .concern-box{
+      background:#fff;
+      border:1px solid var(--border-soft);
+      border-left:3px solid var(--rust);
+      border-radius:0 4px 4px 0;
+      padding:1.3rem 1.5rem;
+      margin:1.5rem 0;
+      box-shadow:0 2px 12px rgba(28,21,8,.06);
+    }
+    .concern-box .cb-label{
+      font-family:'Cormorant Garamond',serif;
+      font-size:.7rem;letter-spacing:.18em;
+      text-transform:uppercase;color:var(--rust);
+      font-weight:700;margin-bottom:.5rem;
+    }
+    .concern-box p{margin-bottom:.75rem}
+    .concern-box p:last-child{margin-bottom:0}
+
+    .positive-box{
+      background:#fff;
+      border:1px solid var(--border-soft);
+      border-left:3px solid var(--gold);
+      border-radius:0 4px 4px 0;
+      padding:1.3rem 1.5rem;
+      margin:1.5rem 0;
+      box-shadow:0 2px 12px rgba(28,21,8,.06);
+    }
+    .positive-box .pb-label{
+      font-family:'Cormorant Garamond',serif;
+      font-size:.7rem;letter-spacing:.18em;
+      text-transform:uppercase;color:var(--gold);
+      font-weight:700;margin-bottom:.5rem;
+    }
+
+    /* ── PULL QUOTE ── */
+    .pull-quote{
+      background:var(--navy);
+      border-radius:4px;
+      padding:1.75rem 1.75rem 1.5rem;
+      margin:2rem 0;position:relative;overflow:hidden;
+    }
+    .pull-quote::before{
+      content:'\201C';position:absolute;
+      top:-1.5rem;left:.7rem;
+      font-family:'Cormorant Garamond',serif;
+      font-size:8rem;color:rgba(201,169,78,.1);
+      line-height:1;pointer-events:none;
+    }
+    .pq-label{
+      font-family:'Cormorant Garamond',serif;
+      font-size:.7rem;letter-spacing:.2em;
+      text-transform:uppercase;color:rgba(201,169,78,.65);
+      margin-bottom:.6rem;
+    }
+    .pull-quote blockquote{
+      font-family:'Cormorant Garamond',serif;
+      font-style:italic;font-size:1.22rem;
+      color:#fff;line-height:1.55;
+      margin-bottom:.65rem;position:relative;
+    }
+    .pull-quote cite{
+      font-family:'Crimson Pro',serif;font-size:.88rem;
+      color:var(--gold-bright);font-style:normal;opacity:.78;
+    }
+
+    /* ── BIBLICAL FRAMEWORK BOX ── */
+    .framework-box{
+      background:rgba(25,37,64,.04);
+      border:1px solid var(--border-gold);
+      border-radius:4px;
+      padding:1.5rem 1.65rem;
+      margin:2rem 0;
+    }
+    .framework-box h3{
+      font-family:'Cormorant Garamond',serif;
+      font-size:1.08rem;font-weight:700;
+      color:var(--navy);margin:0 0 .85rem;
+      padding-bottom:.5rem;
+      border-bottom:1px solid var(--border-gold);
+    }
+    .framework-box ul{
+      list-style:none;padding:0;margin:0;
+    }
+    .framework-box li{
+      padding:.35rem 0 .35rem 1.3rem;
+      position:relative;font-size:.97rem;
+      border-bottom:1px solid rgba(140,111,30,.12);
+    }
+    .framework-box li:last-child{border-bottom:none}
+    .framework-box li::before{
+      content:'›';position:absolute;left:0;
+      color:var(--gold-bright);font-size:1rem;
+    }
+    .framework-box li strong{color:var(--ink)}
+
+    /* ── RESPONSE SECTION ── */
+    .response-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:1.1rem;
+      margin:1.5rem 0;
+    }
+    .rg-card{
+      background:#fff;
+      border:1px solid var(--border-soft);
+      border-radius:4px;
+      padding:1.1rem 1.2rem;
+      box-shadow:0 2px 10px rgba(28,21,8,.06);
+    }
+    .rg-card .rg-label{
+      font-family:'Cormorant Garamond',serif;
+      font-size:.7rem;letter-spacing:.15em;
+      text-transform:uppercase;font-weight:700;
+      margin-bottom:.45rem;
+    }
+    .rg-label-q{color:var(--rust)}
+    .rg-label-a{color:var(--navy)}
+    .rg-card p{font-size:.95rem;line-height:1.6;margin:0}
+
+    /* ── FOOTER ── */
+    .page-footer{
+      background:var(--navy);
+      color:rgba(255,255,255,.4);
+      text-align:center;padding:1.75rem 2rem;
+      font-family:'Crimson Pro',serif;
+      font-style:italic;font-size:.88rem;
+    }
+    .page-footer strong{color:var(--gold-bright);opacity:.7;font-style:normal}
+
+    @media(max-width:640px){
+      .hero{padding:2.5rem 1.25rem 2rem}
+      .main{padding:2rem 1.25rem 4rem}
+      .response-grid{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+
+<div class="top-strip">A supplementary resource — not part of the Cloud of Witnesses curriculum sequence</div>
+
+<div class="hero">
+  <div class="hero-eyebrow">A Closer Look</div>
+  <h1>Martin Luther King Jr.:<br><em>The Preacher, the Scholar,<br>and the Question</em></h1>
+  <p class="hero-sub">An honest engagement with the theological complexity of one of the 20th century's most significant Christian voices — for those who want to think carefully without either dismissing his legacy or evading its genuine complications.</p>
+</div>
+
+<div class="main">
+
+  <!-- ═══ OPENING ═══ -->
+  <div class="section">
+    <div class="section-eyebrow">Where We Begin</div>
+    <h2>Why This Page Exists</h2>
+
+    <p>Martin Luther King Jr. appears in the Cloud of Witnesses curriculum as a figure in the prophetic tradition — a pastor who applied the biblical doctrine of the <em>imago dei</em> to the question of racial dignity with moral clarity and personal courage. That account is accurate and important. The curriculum also notes, briefly, that his academic theology contained elements that depart from orthodox Christology, and that the complexity should be held rather than erased.</p>
+
+    <p>This page goes deeper into that complexity — not to tear down what King built, but to give you what you need to think about him honestly. You may want this because someone has raised the question with you. You may want it because you find the gap between what King preached and what he wrote academically genuinely puzzling. Or you may want it because you believe that honest engagement with a person's full record is a form of respect — perhaps the highest form.</p>
+
+    <p>The framing throughout is the one the Bible itself models: the cloud of witnesses is full of people whose lives were used powerfully by God and who were, simultaneously, flawed in ways that mattered. David. Peter. Jonah. Moses. The presence of flaws does not cancel the work; the presence of work does not cancel the flaws. Both need to be named, and the naming should be done with care.</p>
+
+    <div class="note-box">
+      <p><strong>A preliminary word on sources:</strong> The theological concerns described below are documented in King's own academic writings, many of which are published in the comprehensive <em>Papers of Martin Luther King Jr.</em> series (University of California Press, 14 volumes). The documentation is not speculation, hostile attribution, or contemporary political spin — it is King's own words, from his own papers, examined by scholars across the theological and political spectrum. Where King's views appear to evolve or become less explicit over time, that is also noted.</p>
+    </div>
+  </div>
+
+  <hr class="ornament">
+
+  <!-- ═══ PART ONE — THE TWO KINGS ═══ -->
+  <div class="section">
+    <div class="section-eyebrow">Part One</div>
+    <h2>Two Different Documents, One Man</h2>
+
+    <p>The first thing to understand about Martin Luther King Jr.'s theology is that there are, in effect, two bodies of work — and they are genuinely different in character.</p>
+
+    <p><strong>The academic King</strong> is found in his seminary papers (at Crozer Theological Seminary, 1948–1951), his doctoral dissertation (Boston University, 1955), and the intellectual framework he developed under the influence of Boston Personalism — a liberal Protestant philosophical tradition that shaped his formal theological education.</p>
+
+    <p><strong>The preaching King</strong> is found in his sermons, his public speeches, his pastoral writings, and in texts like <em>Strength to Love</em> (1963) — a collection of sermons that draw deeply on Scripture, the black church tradition, Augustine, and the evangelical heritage of the African American church.</p>
+
+    <p>These two bodies of work do not always align. The academic King writes with the vocabulary and assumptions of mid-20th century liberal Protestantism, which had largely absorbed the 19th century's "higher criticism" of Scripture and was uncomfortable with doctrines like the Virgin Birth, the bodily resurrection, and the literal divinity of Christ. The preaching King uses the language of resurrection, of the living Christ, of the cross as more than symbol, with a pastoral warmth and evangelical urgency that fits poorly into his academic framework.</p>
+
+    <p>This gap is not unique to King — it is a structural feature of much mid-20th century mainline Protestant ministry, where the seminary trained pastors in historical-critical methods and liberal theology while the congregation expected (and received) something considerably more orthodox from the pulpit. But in King's case the gap is particularly pronounced, and the academic papers are particularly explicit, which is why the question deserves honest engagement.</p>
+  </div>
+
+  <hr class="ornament">
+
+  <!-- ═══ PART TWO — THE SPECIFIC CONCERNS ═══ -->
+  <div class="section">
+    <div class="section-eyebrow">Part Two</div>
+    <h2>The Specific Theological Concerns</h2>
+
+    <p>The concerns are real, documented, and specific. They fall into three main categories: Christology (who Jesus is), atonement (what the cross accomplished), and the nature of Scripture and doctrine. Each is worth examining carefully.</p>
+
+    <h3>1. The Virgin Birth and the Bodily Resurrection</h3>
+
+    <div class="concern-box">
+      <div class="cb-label">Documented Concern</div>
+      <p>In a paper written at Crozer Seminary in 1949–1950 titled "What Experiences of Christians Living in the Early Christian Century Led to the Christian Doctrines of the Virgin Birth, the Bodily Resurrection, and the Physical Return of Jesus?", King argued that these doctrines developed mythologically rather than historically — that early Christians, drawing on the pattern of Greco-Roman divine birth narratives and mystery religion resurrection myths, produced these accounts to communicate the <em>significance</em> of Jesus rather than to record literal historical events.</p>
+      <p>He wrote: "First we must admit that the evidence for the tenability of this doctrine is too shallow to convince any objective thinker. To begin with, the earliest written documents in the New Testament make no mention of the virgin birth." He concluded that the doctrine "had its origin in Greek thought" rather than in historical fact.</p>
+      <p>Similarly, he argued that the resurrection accounts should be understood as the disciples' experience of Christ's continuing spiritual influence rather than as a literal bodily rising from the dead.</p>
+    </div>
+
+    <p>These are not peripheral claims. The bodily resurrection is the cardinal fact of Christian proclamation. Paul writes in 1 Corinthians 15:14: "If Christ has not been raised, your faith is futile and you are still in your sins." The Apostles' Creed and the Nicene Creed both affirm the bodily resurrection explicitly. A Christianity that treats the resurrection as a spiritual metaphor rather than a historical event is not, by any standard the church has maintained since the second century, orthodox Christianity.</p>
+
+    <p>It is worth noting that this paper was written when King was approximately twenty-one years old, in a seminary environment thoroughly saturated with these liberal Protestant assumptions. Whether these views represent his mature settled convictions or the academic exercises of a student absorbing his environment is a genuinely open question — but the paper's conclusions are clear.</p>
+
+    <h3>2. The Divinity of Christ</h3>
+
+    <div class="concern-box">
+      <div class="cb-label">Documented Concern</div>
+      <p>In the same paper, King writes about the doctrine of Christ's divine nature: "The real meaning of the divinity of Jesus" is not that he possessed a supernatural metaphysical identity with God, but that "God was uniquely working through him" — that Jesus was the fullest historical expression of the divine, a man so wholly devoted to God that God was most fully present in him. This is a functional rather than ontological Christology — Jesus is divine because of what he did, not because of what he essentially is.</p>
+      <p>In his doctoral dissertation (1955), he engages Tillich and Wieman on the nature of God without affirming the personal, Trinitarian God of historic Christianity as his own conviction. His framework throughout is that of Boston Personalism, which could affirm something like divine personality without necessarily affirming the Trinitarian ontology of the Nicene Creed.</p>
+    </div>
+
+    <p>This matters because it is precisely the question Athanasius fought over in the fourth century (Season I, Study 1). If Jesus is divine only in the sense that God was unusually present in him — but not the eternal second Person of the Trinity, homoousios with the Father — then the Nicene Creed is false, the Chalcedonian Definition is irrelevant, and the atonement loses the ground on which Paul, Anselm, and every orthodox account of the cross depends.</p>
+
+    <h3>3. The Atonement</h3>
+
+    <div class="concern-box">
+      <div class="cb-label">Documented Concern</div>
+      <p>In a 1949 paper at Crozer ("The Significant Contributions of Jeremiah to Religious Thought"), and in other academic writings, King shows no interest in and some skepticism toward substitutionary atonement — the doctrine that Christ bore the penalty for human sin in our place. His academic framework tends toward what is called the "moral influence" theory: the cross is primarily the supreme demonstration of God's love, which moves us to repentance and transformation, rather than an objective transaction in which the penalty of sin is paid and the righteousness of God is satisfied.</p>
+    </div>
+
+    <p>This is significant because substitutionary atonement is not a secondary doctrine. It is, in the Reformed tradition and in the broader evangelical tradition, the heart of what Paul means by "Christ died for our sins according to the Scriptures" (1 Corinthians 15:3). A theology that reduces the cross to moral influence produces a different gospel — one in which the primary problem is human moral failure rather than guilt before a holy God, and the solution is inspiration rather than imputation.</p>
+
+    <h3>4. The Plagiarism Question</h3>
+
+    <div class="concern-box">
+      <div class="cb-label">Documented Concern — Different in Kind</div>
+      <p>In 1991, Boston University completed an investigation that found King's doctoral dissertation contained substantial plagiarism from Jack Boozer's 1952 doctoral dissertation. The investigation was thorough and its conclusions well-documented. Boston University chose not to revoke his degree posthumously, but it added a letter to the archived dissertation noting the findings.</p>
+      <p>This is worth mentioning separately because it is a different kind of concern from the theological ones — it is a matter of academic integrity rather than doctrinal content. It does not invalidate his civil rights work or his public ministry. It does not make his plagiarized conclusions false. But it is part of the honest account of the man.</p>
+    </div>
+  </div>
+
+  <hr class="ornament">
+
+  <!-- ═══ PART THREE — DID HIS VIEWS CHANGE? ═══ -->
+  <div class="section">
+    <div class="section-eyebrow">Part Three</div>
+    <h2>Did His Views Evolve? The Evidence Is Genuinely Mixed</h2>
+
+    <p>This is the question most important to hold with precision, because the honest answer is: we don't fully know, and the evidence points in multiple directions.</p>
+
+    <p><strong>What did not change:</strong> King never publicly repudiated the academic views described above. He never wrote a retraction of his Crozer Seminary papers. He never gave an interview in which he affirmed the bodily resurrection as a historical event or the substitutionary atonement as his understanding of the cross. The academic framework he developed at Crozer and Boston appears, in his published writings and correspondence, to have remained his background intellectual architecture throughout his life.</p>
+
+    <p><strong>What became less explicit:</strong> His later public writing — especially after the mid-1950s — tends to use more orthodox-sounding language without resolving the underlying questions. <em>Strength to Love</em> (1963) speaks of "the living Christ" and "Christ crucified" with genuine pastoral warmth and without the explicit demythologizing of the seminary papers. But this could reflect a shift in register from academic to pastoral rather than a change in underlying conviction. Preachers routinely use orthodox evangelical language in sermons regardless of their academic theology — this was, as noted, a structural feature of mainline Protestant ministry in the mid-20th century.</p>
+
+    <p><strong>What suggests possible movement:</strong> Several scholars who have studied King's full corpus argue that his engagement with the black church tradition — which is thoroughly orthodox in its Christology and deeply committed to the historical resurrection as the ground of hope — pulled him toward greater orthodoxy in practice over time, even if he never formally recanted the academic positions. His preaching in the final years shows increasing focus on suffering, on the cross as genuinely costly, on hope grounded in the risen Christ rather than in human moral progress. Whether this represents a deepening of orthodox conviction or simply a deepening pastoral register is impossible to determine with certainty.</p>
+
+    <p><strong>The honest conclusion:</strong> We cannot responsibly say "he changed his mind" because there is no direct evidence that he did. We also cannot responsibly say "he held these views unchanged until his death" because his later writing is genuinely different in tone. What we can say is that the academic papers represent his formal theological training and the framework he developed as a young scholar, that they contain positions clearly incompatible with Chalcedonian orthodoxy, and that his public preaching was considerably more orthodox in expression than those academic papers — while the exact relationship between the two remains an open question that historians are still examining.</p>
+
+    <div class="pull-quote">
+      <div class="pq-label">A Helpful Way to Frame It</div>
+      <blockquote>"The Jesus of the Birmingham Jail letter and the Jesus of the 1949 Crozer paper are not obviously the same Jesus — and what that means for King's settled convictions is a genuinely open question that deserves honest uncertainty rather than confident resolution in either direction."</blockquote>
+      <cite>— A fair summary of where the scholarship stands</cite>
+    </div>
+  </div>
+
+  <hr class="ornament">
+
+  <!-- ═══ PART FOUR — WHAT HE GOT RIGHT ═══ -->
+  <div class="section">
+    <div class="section-eyebrow">Part Four</div>
+    <h2>What Was Genuinely, Powerfully Right</h2>
+
+    <p>Theological concerns do not erase contribution. The Bible consistently presents figures who were used powerfully by God in specific ways while being seriously flawed in others. Holding both is not incoherence; it is honesty.</p>
+
+    <div class="positive-box">
+      <div class="pb-label">What stands as genuinely orthodox and important</div>
+      <p><strong>The imago dei argument.</strong> King's central public argument — that racial segregation was wrong because every human being bears the image of God, and therefore possesses a dignity no human law can legitimately override — is theologically sound, biblically grounded, and prophetically important. It draws on Genesis 1:26–27, on the Incarnation as God's declaration of human worth, and on the prophetic tradition of Amos, Isaiah, and Micah. This argument does not depend on his Christology being orthodox; it stands on its own biblical foundation.</p>
+      <p><strong>The prophetic mode.</strong> The genre of King's public ministry — standing before power, naming injustice by the standard of God's own character, calling the nation and the church to account — is the genre of the Hebrew prophets. It is legitimate, biblical, and urgently needed in every generation. The fact that King's academic theology was problematic does not make the prophetic tradition he stood in any less authoritative.</p>
+      <p><strong>The Letter from Birmingham Jail.</strong> This 1963 document — King's response to white moderate clergy urging patience — is one of the most theologically precise pieces of Christian public ethics in the 20th century. Its argument draws on Augustine, Aquinas, and Scripture. Its distinction between just and unjust laws is grounded in the natural law tradition and the character of God. It is, by any standard, a serious theological document that has held up under decades of scrutiny.</p>
+      <p><strong>His sermons.</strong> The sermons collected in <em>Strength to Love</em> and elsewhere are genuine pastoral writing — warm, Scripture-saturated (if not always exegetically precise), oriented toward courage and hope and the sustaining grace of God in the face of suffering. They have fed and strengthened many people, including people with fully orthodox theology, and they deserve that reception.</p>
+    </div>
+  </div>
+
+  <hr class="ornament">
+
+  <!-- ═══ PART FIVE — THE BIBLICAL FRAMEWORK ═══ -->
+  <div class="section">
+    <div class="section-eyebrow">Part Five</div>
+    <h2>The Biblical Framework for Holding This</h2>
+
+    <div class="framework-box">
+      <h3>God Uses Imperfect Vessels — the Pattern in Scripture</h3>
+      <ul>
+        <li><strong>David</strong> — the man after God's own heart, author of the Psalms, Israel's greatest king — committed adultery and arranged the murder of the woman's husband. The Bible names it clearly, describes God's grief over it, records the consequences, and does not revoke David's place in the covenant line or in the cloud of witnesses.</li>
+        <li><strong>Moses</strong> — the deliverer, the lawgiver, the man who spoke with God face to face — murdered an Egyptian, fled justice, and in his anger struck the rock God told him to speak to, which cost him the Promised Land. The tradition honored him anyway.</li>
+        <li><strong>Peter</strong> — the apostle who preached at Pentecost and whose confession is the rock on which the church is built — denied Christ three times on the night of his arrest, and later (Galatians 2) compromised the gospel by withdrawing from Gentile fellowship under social pressure. Paul named the failure publicly. Peter remains Peter.</li>
+        <li><strong>Jonah</strong> — the prophet whose mission produced one of the greatest revivals in the Old Testament — ran from God, became furious when the people he preached to actually repented, and had to be corrected by a plant. His preaching was sound; his heart was a mess. God used it anyway.</li>
+        <li><strong>Cyril of Alexandria</strong> — the theologian whose Christology became the standard the whole church endorsed — was capable of genuine ruthlessness toward non-Christians in Alexandria. <em>The Cloud of Witnesses</em> names this honestly in Study 2.</li>
+      </ul>
+    </div>
+
+    <p>The pattern is consistent: God does not require moral or theological perfection as the precondition for using a person in specific, important ways. The contribution is real. The flaws are real. Both need to be named. Neither cancels the other.</p>
+
+    <p>The application to King: his imago dei argument and his prophetic ministry were real contributions that have held up under scrutiny. His academic Christology was seriously problematic and represents a genuine departure from orthodox Christianity. Both are true. Holding both is not contradiction — it is the kind of honest accounting the Bible itself models.</p>
+  </div>
+
+  <hr class="ornament">
+
+  <!-- ═══ PART SIX — HOW TO TALK ABOUT IT ═══ -->
+  <div class="section">
+    <div class="section-eyebrow">Part Six</div>
+    <h2>How to Talk About This With Someone Who Feels You Are Slandering Him</h2>
+
+    <p>If you raise King's theological complexity with someone who deeply honors his legacy, you should expect some resistance — and much of that resistance will be emotionally legitimate, even if not always theologically informed. The history of white conservative Christianity using "theological concerns" as a cover for racial politics is real and well-documented, and it creates an understandable suspicion about who raises these questions and why. You will need to be prepared to name that context honestly.</p>
+
+    <p>Here are the specific objections you are most likely to encounter, and honest responses to each:</p>
+
+    <div class="response-grid">
+      <div class="rg-card">
+        <div class="rg-label rg-label-q">The Objection</div>
+        <p>"You're just using theology to discredit his civil rights work."</p>
+      </div>
+      <div class="rg-card">
+        <div class="rg-label rg-label-a">An Honest Response</div>
+        <p>"The imago dei argument he made is theologically sound and I accept it. What I'm raising is a separate question — about his Christology in his academic writings — that doesn't touch his civil rights contribution. I can say both that his prophetic ministry was important and that his academic theology departed from orthodoxy. The Bible holds people in that kind of complexity all the time."</p>
+      </div>
+
+      <div class="rg-card">
+        <div class="rg-label rg-label-q">The Objection</div>
+        <p>"He was a Christian pastor. Are you saying he wasn't really a Christian?"</p>
+      </div>
+      <div class="rg-card">
+        <div class="rg-label rg-label-a">An Honest Response</div>
+        <p>"I'm not making a judgment about his soul — that belongs to God. What I'm saying is that his academic writing contained theological positions that are not compatible with Chalcedonian orthodoxy: specifically, a non-literal view of the resurrection and a functional rather than ontological Christology. Whether those views represent his settled personal convictions or his academic training is a genuinely open question. I'm trying to name the question honestly, not render a verdict."</p>
+      </div>
+
+      <div class="rg-card">
+        <div class="rg-label rg-label-q">The Objection</div>
+        <p>"He was twenty-one when he wrote those papers. People change."</p>
+      </div>
+      <div class="rg-card">
+        <div class="rg-label rg-label-a">An Honest Response</div>
+        <p>"That's a fair point, and I take it seriously. He never publicly recanted those positions, which is the main reason we can't just say he changed his mind. But his later preaching is genuinely different in tone — much more orthodox-sounding — and it's possible his views evolved without him ever formally addressing the earlier papers. I hold that uncertainty honestly. I'm not claiming to know more about his inner convictions than the evidence supports."</p>
+      </div>
+
+      <div class="rg-card">
+        <div class="rg-label rg-label-q">The Objection</div>
+        <p>"Why does it matter? His work bore good fruit."</p>
+      </div>
+      <div class="rg-card">
+        <div class="rg-label rg-label-a">An Honest Response</div>
+        <p>"His civil rights work bore fruit that I think was genuinely good and important, and I say that sincerely. But theological accuracy matters for the health of the church — not to judge individuals, but because what we teach about who Jesus is shapes everything else. The church has always cared about the distinction between honoring someone's contribution and endorsing their complete theological framework. We can do both — and I think we should."</p>
+      </div>
+
+      <div class="rg-card">
+        <div class="rg-label rg-label-q">The Objection</div>
+        <p>"Conservative Christians used 'theological concerns' to oppose civil rights. Aren't you doing the same thing?"</p>
+      </div>
+      <div class="rg-card">
+        <div class="rg-label rg-label-a">An Honest Response</div>
+        <p>"That history is real and I won't minimize it. Many people did use theological language as cover for racial opposition that had no theological integrity. What I'm doing is different in kind: I'm raising specific documented concerns about specific academic papers, not about his civil rights work, and I affirm the imago dei argument he made as theologically sound. If my concern were the civil rights movement itself, I'd be wrong and you should push back. But it isn't."</p>
+      </div>
+    </div>
+
+    <div class="note-box">
+      <p><strong>The most important thing to communicate</strong> is that theological honesty about a person is a form of respect, not disrespect. We take King seriously enough to engage his full record — including the parts that are complicated. We do not honor him by pretending the complications don't exist. We do not honor him by reducing him to a symbol. We honor him by treating him as a real person — a complex, gifted, courageous, flawed human being who lived in the same tension every Christian lives in: claimed by a gospel we do not always fully understand, used by a God whose ways exceed our capacity to fully systematize them.</p>
+    </div>
+  </div>
+
+  <hr class="ornament">
+
+  <!-- ═══ PART SEVEN — WHAT TO DO WITH THE COMPLEXITY ═══ -->
+  <div class="section">
+    <div class="section-eyebrow">Part Seven</div>
+    <h2>What to Do With the Complexity</h2>
+
+    <p>There are three temptations to avoid and one thing to hold on to.</p>
+
+    <p><strong>Avoid hagiography</strong> — the erasure of the complications in order to produce a usable symbol. King is most useful to the church not as a symbol but as a person: specifically human, specifically flawed, specifically courageous in specific circumstances. Symbols can be repurposed by any ideology; persons are harder to repurpose because they keep being themselves. Hagiography also tends to make the saint's courage look easier than it was, which is a disservice to those facing comparable demands today.</p>
+
+    <p><strong>Avoid weaponization</strong> — the use of theological concerns as a rhetorical tool to dismiss his civil rights legacy without engaging it on its own terms. The imago dei argument is sound. The prophetic tradition is legitimate. The Letter from Birmingham Jail is serious theology. These stand or fall on their own merits, and raising the Christology question does not give anyone permission to stop engaging them.</p>
+
+    <p><strong>Avoid false resolution</strong> — the pressure to decide, once and for all, whether King was "really a Christian" or whether the good outweighs the bad or whether he is primarily to be honored or primarily to be criticized. The honest answer is that these questions do not have clean resolutions, and pretending they do — in either direction — misrepresents both the man and the complexity of God's action in history.</p>
+
+    <p><strong>Hold on to the pattern:</strong> God works through imperfect people. He worked through the prophet who ran from Nineveh, the king who committed murder, the apostle who denied and the apostle who compromised the gospel in Antioch, and the theologian whose Christology was sound but whose hands were not clean. The cloud of witnesses is not a gallery of the spiritually excellent. It is a testament to the grace that uses what it has, redeems what can be redeemed, and accomplishes purposes that exceed the capacity of any of its human instruments.</p>
+
+    <p>Martin Luther King Jr. belongs in that cloud — not despite the complications but alongside them, which is the only way any of us belongs there at all.</p>
+  </div>
+
+  <hr class="ornament">
+
+  <!-- ═══ CLOSING ═══ -->
+  <div class="section">
+    <div class="section-eyebrow">Closing</div>
+    <h2>A Word About Why This Matters for the Church Now</h2>
+
+    <p>The question of how to engage figures like King — figures whose contribution to the church's public witness was real and whose theology was complicated — is not going away. It is a question that arises with increasing frequency as the church tries to hold together a commitment to orthodox doctrine and a commitment to the prophetic ministry of justice.</p>
+
+    <p>The answer the church needs is not "choose one." It is not "honor the civil rights work and ignore the theology" — that treats orthodoxy as optional. It is not "reject the civil rights work because of the theology" — that treats prophethood as disqualified by heterodoxy, which Scripture itself does not do. The answer is the harder thing: holding both clearly, honestly, without collapsing into either hagiography or dismissal, and trusting that God is big enough to have used a complicated person in important ways while remaining the God who does not relativize the truth of his own Son.</p>
+
+    <p>The Christ King preached about in his best sermons — the crucified and risen Lord who walks with the suffering through the valley of the shadow — is the Christ of the Nicene Creed, the Christ Athanasius went into exile five times to defend, the Christ Paul said if not raised our faith is futile. Whether King believed everything those statements entail is the complicated question. That the church needs to keep believing it, and keep preaching it, and keep applying it to every question of human dignity — including the ones King applied it to — is not complicated at all.</p>
+  </div>
+
+  <!-- ═══ FURTHER READING ═══ -->
+  <div class="section" style="background:#fff;border:1px solid var(--border-soft);border-radius:4px;padding:1.5rem 1.75rem;box-shadow:0 2px 12px rgba(28,21,8,.07)">
+    <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:700;color:var(--ink);margin-bottom:1rem;padding-bottom:.6rem;border-bottom:1px solid var(--border-soft)">For Further Reading</h3>
+    <p style="font-size:.95rem;color:var(--ink-mid);margin-bottom:.75rem"><strong>The Papers of Martin Luther King Jr.</strong> (University of California Press, multiple volumes, Clayborne Carson, ed.) — the primary sources. The Crozer Seminary papers are in Volume I. Essential for anyone who wants to read King's own words rather than summaries of them.</p>
+    <p style="font-size:.95rem;color:var(--ink-mid);margin-bottom:.75rem"><strong>Strength to Love</strong> by Martin Luther King Jr. — his collected sermons. The best single-volume access to the preaching King, and genuinely worth reading on its own terms.</p>
+    <p style="font-size:.95rem;color:var(--ink-mid);margin-bottom:.75rem"><strong>The Letter from Birmingham Jail</strong> — available freely online in multiple sources. Read it in full rather than in excerpt; it is a different and better document than the famous passages suggest.</p>
+    <p style="font-size:.95rem;color:var(--ink-mid);margin-bottom:.75rem"><strong>"The Intellectual Development of Martin Luther King Jr."</strong> by Ira Zepp and Kenneth Smith — an academic study of King's theological formation at Crozer and Boston, helpful for understanding the sources of his academic framework.</p>
+    <p style="font-size:.95rem;color:var(--ink-mid)"><strong>"King's Plagiarism: Imitation, Insecurity, and Transformation"</strong> by Keith Miller — a nuanced analysis that places King's academic writing practices in their cultural and historical context without minimizing the documented findings.</p>
+  </div>
+
+</div>
+
+<footer class="page-footer">
+  <strong>Cloud of Witnesses</strong> · Supplementary Resource · Not part of the curriculum sequence
+</footer>
+
+</body>
+</html>
